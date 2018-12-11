@@ -117,9 +117,9 @@ int main(void)
 		glClear(GL_COLOR_BUFFER_BIT);
 		glUseProgram(program);
 		float timevalue = glfwGetTime();
-		float value = (tan(timevalue)/2.0f) + 0.5f;
+		float value = (sin(timevalue)/2.0f) + 0.5f;
 		int vertexcolorlocation = glGetUniformLocation(program,"ourcolor");
-		glUniform4f(vertexcolorlocation,value,0.0f,0.0f,1.0f);
+		glUniform4f(vertexcolorlocation,0.0f,0.0f,value,1.0f);
 
 
 
